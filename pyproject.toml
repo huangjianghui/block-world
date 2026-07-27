@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "block_world"
+version = "1.0.0"
+description = "64×64 方块世界 — 实时自动寻路 · 能量收集与分裂 · 种族演化生态模拟"
+readme = "README.md"
+authors = [
+    { name = "BlockWorld Team" },
+]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: X11 Applications",
+    "Intended Audience :: Education",
+    "Topic :: Games/Entertainment :: Simulation",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/block-world/block_world"
+Repository = "https://github.com/block-world/block_world.git"
+
+[project.scripts]
+block-world = "block_world.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
